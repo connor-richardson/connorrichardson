@@ -22,6 +22,9 @@ test_images = test_images.reshape((-1, 784))
 print(train_images.shape)
 print(test_images.shape)
 
+#One-hot encode labels
+train_labels = to_categorical(train_labels)
+test_labels = to_categorical(test_labels)
 
 #Import the Sequential model
 model = Sequential([
@@ -41,9 +44,10 @@ model.compile(
 epochs = 5
 batch_size = 32
 model.fit(
-  training_images,
-  to_categorical(training_labels),
+  train_images,
+  train_labels,
   epochs=epochs,
   batch_size=batch_size,
   validation_split=0.2,  # Add validation data
 )
+
