@@ -23,7 +23,6 @@ print(train_images.shape)
 print(test_images.shape)
 
 
-
 # from tensorflow.keras.models import Sequential
 model = Sequential([
   Dense(64, activation='relu', input_shape=(784,)),
@@ -37,10 +36,13 @@ model.compile(
   metrics=['accuracy'],
 )
 
-
+# Train the model
+epochs = 5
+batch_size = 32
 model.fit(
-  train_images,
-  to_categorical(train_labels),
-  epochs=5,
-  batch_size=32,
+  training_images,
+  to_categorical(training_labels),
+  epochs=epochs,
+  batch_size=batch_size,
+  validation_split=0.2,  # Add validation data
 )
