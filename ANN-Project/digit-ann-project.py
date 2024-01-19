@@ -23,13 +23,14 @@ print(train_images.shape)
 print(test_images.shape)
 
 
-# from tensorflow.keras.models import Sequential
+#Import the Sequential model
 model = Sequential([
   Dense(64, activation='relu', input_shape=(784,)),
   Dense(64, activation='relu'),
   Dense(10, activation='softmax'),
 ])
 
+# Compile the model
 model.compile(
   optimizer='adam',
   loss='categorical_crossentropy',
