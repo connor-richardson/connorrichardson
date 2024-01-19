@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import sys
 import re
 
@@ -77,7 +76,7 @@ def main():
 	and writes results of the password analysis into
 	the standard output  """
 
-	# if arguments provided, show error message
+	# If arguments provided, show error message
 	if len(sys.argv) != 1:
 		print("No arguments should be provided.")
 		print("Usage: %s" % sys.argv[0])
@@ -91,7 +90,7 @@ def main():
 			compute_password_strength(line)
 		line = sys.stdin.readline().strip()
 
-	# end the script normally
+	# End the script normally
 	return 0
 
 if __name__ == "__main__":

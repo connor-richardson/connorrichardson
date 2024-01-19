@@ -7,21 +7,18 @@
 #define MAX_LINE_LEN 5000
 
 void inccounter(Patient *p, void *arg) {
-    /* //!DO NOT CHANGE THIS FUNCTION. */
     int *ip = (int *)arg;
     (*ip)++;
 }
 
 
 void print_word(Patient *p, void *arg) {
-    /* //!DO NOT CHANGE THIS FUNCTION. */
     char *fmt = (char *)arg;
     printf(fmt, p->name, p->birth_year, p->priority);
 }
 
 
 void dump(Patient *list) {
-    /* //!DO NOT CHANGE THIS FUNCTION. */
     int len = 0;
 
     apply(list, inccounter, &len);    

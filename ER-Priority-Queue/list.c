@@ -1,10 +1,3 @@
-/*
- * linkedlist.c
- *
- * Based on the implementation approach described in "The Practice 
- * of Programming" by Kernighan and Pike (Addison-Wesley, 1999).
- */
-
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -64,10 +57,7 @@ Patient *add_with_priority(Patient *list, Patient *new) {
     curr->next = new;
 
     return list;
-    
-
 }
-
 
 Patient *peek_front(Patient *list) {
     return list;
